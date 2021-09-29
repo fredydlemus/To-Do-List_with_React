@@ -1,13 +1,21 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import './LoginButton.css';
+@import './TodoMenu.css';
+@import './TodoDay.css';
+@import './TodoItem.css';
+@import './TodoList.css';
+@import './CreateTodoButton.css';
+@import './CommentsButton.css';
+
+:root {
+    --blue-color: rgb(9, 9, 46);
+    --blue-soft: rgb(44, 44, 68);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--blue-color);
+    font-family: 'Ubuntu', sans-serif;
 }
