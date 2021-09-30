@@ -7,7 +7,7 @@ import { TodoSearch } from "./TodoSearch";
 import { TodoGreeting } from "./TodoGreeting";
 import { TodoDay } from "./TodoDay";
 import { LoginButton } from "./LoginButton";
-import { TodoMenu } from "./TodoMenu";
+import { TodoHeader } from "./TodoHeader";
 import { CommentsButton } from "./CommentsButton";
 // import './App.css';
 const todos = [
@@ -22,10 +22,10 @@ const todos = [
 function App() {
   return (
     <React.Fragment>
-      <TodoMenu>
+      <TodoHeader>
         <TodoGreeting user="Fredy" greeting="Good Afternoon "/>
         <LoginButton/>
-      </TodoMenu>
+      </TodoHeader>
       
       <TodoSearch/>
       <TodoDay date="Tuesday 28-sep-2021">

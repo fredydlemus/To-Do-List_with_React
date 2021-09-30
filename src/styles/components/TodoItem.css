@@ -1,4 +1,4 @@
-.Item{
+.dayCard-list-item{
     
   border-radius: 20px;
     margin: 20px 5px;
@@ -16,7 +16,7 @@
     color: gray;
 }
 
-.Content{
+.dayCard-list-item-textWrapper{
     background-color: wheat;
     display: flex;
     align-items: center;
@@ -33,12 +33,12 @@
     text-decoration: line-through;
 }
 
-.Content p{
+.dayCard-list-item-textWrapper__text{
     font-weight: bold;
     font-size: 18px;
 }
 
-.Item_buttons{
+.dayCard-list-item-buttonsWrapper{
     background-color: var(--blue-soft);
     height: 45px;
     display: flex;
@@ -61,7 +61,7 @@
     background-color: var(--blue-color);
 }
 
-.Item_button{
+.dayCard-list-item-buttonsWrapper__button{
     display: inline-block;
     height: 35px;
     width: 35px;

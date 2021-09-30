@@ -3,11 +3,11 @@ import React from "react";
 function TodoDay(props){
     return(
        
-        <div className="TodoDay">
-            <h3>{props.date}</h3>
+        <section className="dayCard">
+            <h3 className="dayCard__dayTitle">{props.date}</h3>
             
             {props.children}
-        </div>
+        </section>
     );
 }
 

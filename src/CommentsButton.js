@@ -2,7 +2,7 @@ import react from "react";
 
 function CommentsButton(){
     return(
-        <button className='Button_app comment_button'>-</button>
+        <button className='buttonApp-comment'>-</button>
     );
 }
 

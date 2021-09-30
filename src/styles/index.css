@@ -1,0 +1,25 @@
+@import './components/LoginButton.css';
+@import './components/TodoHeader.css';
+@import './components/TodoDay.css';
+@import './components/TodoItem.css';
+@import './components/TodoList.css';
+@import './components/CreateTodoButton.css';
+@import './components/CommentsButton.css';
+@import './components/TodoCounter.css';
+@import './components/TodoGreeting.css';
+@import './components/TodoSearch.css';
+@import './components/buttons.css';
+
+:root {
+    --blue-color: rgb(9, 9, 46);
+    --blue-soft: rgb(44, 44, 68);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--blue-color);
+    font-family: 'Ubuntu', sans-serif;
+}

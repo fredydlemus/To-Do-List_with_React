@@ -1,4 +1,4 @@
-.TodoDay{
+.dayCard{
     margin-top: 30px;
     border: 1px solid gray;
     border-radius: 10px;
@@ -7,7 +7,7 @@
     margin-bottom: 50px;
 }
 
-.TodoDay h3{
+.dayCard__dayTitle{
     color: white;
     text-align: center;
     font-size: 24px;
