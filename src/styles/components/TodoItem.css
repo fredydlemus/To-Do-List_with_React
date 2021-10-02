@@ -53,9 +53,9 @@
     background-color: var(--blue-color);
 }
 
-.Item_buttons_complete span{
+/* .Item_buttons_complete span{
     background-color: var(--blue-color);
-}
+} */
 
 .item-buttons-wrapper__button{
     
@@ -69,6 +69,12 @@
     border: 2px solid black;
     margin: 10px;
     transform: rotate(180deg);
+    cursor: pointer;
+    transition-duration: 1s;
+}
+
+.item-buttons-wrapper__button--complete:hover{
+    border: 2px solid green;
 }
 
 .item-buttons-wrapper__button-content{
@@ -87,4 +93,8 @@
 .item-buttons-wrapper__button--completed{
     background-color: green;
     color: black;
+}
+
+.item-buttons-wrapper__button--delete:hover{
+    border:  2px solid red;
 }
