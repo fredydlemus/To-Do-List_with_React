@@ -1,9 +1,11 @@
 import React from "react";
 
 
-function TodoCounter(){
+function TodoCounter({ total, completed}){
+
+    
     return (
-        <h2 className='dayCard__counter'>today you has completed 2 of 3 ToDo's!!!</h2>
+        <h2 className='dayCard__counter'>today you has completed {completed} of {total} ToDo's!!!</h2>
         
     );
 }
