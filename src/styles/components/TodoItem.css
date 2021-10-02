@@ -1,4 +1,4 @@
-.dayCard-list-item{
+.item{
     
   border-radius: 20px;
     margin: 20px 5px;
@@ -11,12 +11,12 @@
     
 }
 
-.Item_complete{
+.item--completed{
     border: 1px solid white;
     color: gray;
 }
 
-.dayCard-list-item-textWrapper{
+.item-text-wrapper{
     background-color: wheat;
     display: flex;
     align-items: center;
@@ -25,20 +25,20 @@
     min-height: 80px;
 }
 
-.Content_complete{
+.item-text-wrapper--completed{
     background-color: var(--blue-color);
 }
 
-.Content_complete p{
+.item-text-wrapper__content--completed{
     text-decoration: line-through;
 }
 
-.dayCard-list-item-textWrapper__text{
+.item-text-wrapper__content{
     font-weight: bold;
     font-size: 18px;
 }
 
-.dayCard-list-item-buttonsWrapper{
+.item-buttons-wrapper{
     background-color: var(--blue-soft);
     height: 45px;
     display: flex;
@@ -49,20 +49,16 @@
     
 }
 
-.Item_buttons_complete{
+.item-buttons-wrapper--completed{
     background-color: var(--blue-color);
-}
-
-.Icon_complete{
-    background-color: green;
 }
 
 .Item_buttons_complete span{
     background-color: var(--blue-color);
 }
 
-.dayCard-list-item-buttonsWrapper__button{
-    display: inline-block;
+.item-buttons-wrapper__button{
+    
     height: 35px;
     width: 35px;
     display: flex;
@@ -75,3 +71,20 @@
     transform: rotate(180deg);
 }
 
+.item-buttons-wrapper__button-content{
+    color: black;
+}
+
+.item-buttons-wrapper__button-content--completed{
+    color: gray;
+}
+
+.item-buttons-wrapper__button--deleted{
+    background-color: var(--blue-color);
+}
+
+
+.item-buttons-wrapper__button--completed{
+    background-color: green;
+    color: black;
+}

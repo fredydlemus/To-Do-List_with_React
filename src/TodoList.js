@@ -3,7 +3,7 @@ import React from "react";
 function TodoList(props){
     return(
         
-            <ul className="dayCard-list">
+            <ul className="dayCard__list">
                 {props.children}
             </ul>
         
