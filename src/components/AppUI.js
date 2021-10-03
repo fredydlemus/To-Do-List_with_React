@@ -9,54 +9,18 @@ import { TodoDay } from "./TodoDay";
 import { LoginButton } from "./LoginButton";
 import { TodoHeader } from "./TodoHeader";
 import { CommentsButton } from "./CommentsButton";
-// import './App.css';
-const defaultTodos = [
-  { text: 'Cortar cebolla', completed: true},
-  { text: 'Tomar el nuevo curso', completed: false},
-  { text: 'Llorar con la llorona', completed: true},
-  { text: 'Soy una pruebita :D', completed: false},
-  
 
-];
-
-function App() {
-
-  
-  const [todos, setTodos] = React.useState(defaultTodos);
-  const [searchValue, setSearchValue] = React.useState('');
-
-  const completedTodos = todos.filter(todo => !!todo.completed).length;
-  const totalTodos = todos.length;
-
-  let searchedTodos = [];
-
-  if(!searchValue.length >= 1){
-    searchedTodos = todos;
-  }else{
-    searchedTodos = todos.filter(todo => {
-      const todoText = todo.text.toLowerCase();
-      const searchText = searchValue.toLowerCase();
-      return todoText.includes(searchText);
-    })
-  }
-
-  const completeTodo = (text) => {
-    const todoIndex = todos.findIndex(todo => todo.text === text);
-    const newTodos = [...todos];
-    newTodos[todoIndex].completed = true;
-    setTodos(newTodos);
-  }
-
-
-  const deleteTodo = (text) => {
-    const todoIndex = todos.findIndex(todo => todo.text === text);
-    const newTodos = [...todos];
-    newTodos.splice(todoIndex, 1)
-    setTodos(newTodos);
-  }
-
-  return (
-    <React.Fragment>
+function AppUI({
+    totalTodos,
+    completedTodos,
+    searchValue,
+    setSearchValue,
+    searchedTodos,
+    completeTodo,
+    deleteTodo
+}){
+    return(
+        <React.Fragment>
       <TodoHeader>
         <TodoGreeting user="Fredy" greeting="Good Afternoon "/>
         <LoginButton/>
@@ -87,7 +51,7 @@ function App() {
       <CreateTodoButton/>
       
     </React.Fragment>
-  );
+    );
 }
 
-export default App;
+export {AppUI};
