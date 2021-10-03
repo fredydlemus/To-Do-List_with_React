@@ -27,3 +27,8 @@ body{
     background-color: var(--blue-color);
     font-family: 'Ubuntu', sans-serif;
 }
+
+.FirstMessage{
+    color: white;
+    text-align: center;
+}

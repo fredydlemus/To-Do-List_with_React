@@ -40,7 +40,7 @@ function AppUI(){
         <TodoList>
           {error && <p>Asustate</p>}
           {loading && [<TodosLoading key={0}/>, <TodosLoading key={1}/>, <TodosLoading key={2}/>] }
-          {(!loading && !searchedTodos.length) && <p>Crea tu primer ToDo</p>}
+          {(!loading && !searchedTodos.length) && <p className="FirstMessage">Crea tu primer ToDo</p>}
           {searchedTodos.map(todo => (
             <TodoItem 
               key={todo.text} 
