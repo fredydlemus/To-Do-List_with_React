@@ -9,6 +9,10 @@
 @import './components/TodoGreeting.css';
 @import './components/TodoSearch.css';
 @import './components/buttons.css';
+@import './components/Modal.css';
+@import './components/TodoForm.css';
+@import './components/TodosLoading.css';
+
 
 :root {
     --blue-color: rgb(9, 9, 46);

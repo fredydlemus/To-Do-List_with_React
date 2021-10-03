@@ -5,7 +5,7 @@
     border-radius: 50%;
     cursor: pointer;
     font-size: 50px;
-    
+    z-index: 5;
     font-weight: bold;
     color: #FAFAFA;
     display: flex;
@@ -25,7 +25,7 @@
 
 
 
-.buttonApp--create:hover{
+.buttonApp:hover{
     transform: rotate(224deg);
 }
 
@@ -35,8 +35,3 @@
     left: 24px;
 }
 
-
-
-.buttonApp--comment:hover{
-    transform: rotate(224deg);
-}

@@ -68,7 +68,7 @@
     border-radius: 50%;
     border: 2px solid black;
     margin: 10px;
-    transform: rotate(180deg);
+    
     cursor: pointer;
     transition-duration: 1s;
 }
@@ -91,9 +91,9 @@
 
 
 .item-buttons-wrapper__button--completed{
-    background-color: green;
-    color: black;
-}
+    
+    color: green;
+} 
 
 .item-buttons-wrapper__button--delete:hover{
     border:  2px solid red;

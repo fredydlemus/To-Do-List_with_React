@@ -1,0 +1,85 @@
+.LoadingTodo-container{
+    
+    border-radius: 20px;
+      margin: 20px 5px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: -1px 9px 3px -3px rgba(6,6,32,0.75);
+  -webkit-box-shadow: -1px 9px 3px -3px rgba(6,6,32,0.75);
+  -moz-box-shadow: -1px 9px 3px -3px rgba(6,6,32,0.75);
+  
+
+  }
+
+  @keyframes loadingAnimation {
+      0%{
+          background-position: 0% 50%;
+      }50%{
+          background-position: 100% 50%;
+      }100%{
+          background-position: 0% 50%;
+      }
+  }
+  
+  
+  
+  .LoadingTodo-text-wrapper{
+      background-color: wheat;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      padding-right: 10px;
+      min-height: 80px;
+      background: linear-gradient(90deg, var(--blue-color), var(--blue-soft));
+      background-size: 400% 400%;
+      animation: loadingAnimation 3s ease-in-out infinite;
+  }
+  
+  
+  
+  .LoadingTodo-text-wrapper__content{
+      font-weight: bold;
+      font-size: 18px;
+      color: white;
+  }
+  
+  .LoadingTodo-buttons-wrapper{
+      background-color: var(--blue-soft);
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      border-top: 3px solid gray;
+      padding-right: 20px;
+      background: linear-gradient(90deg, var(--blue-color), var(--blue-soft));
+      background-size: 400% 400%;
+      animation: loadingAnimation 3s ease-in-out infinite;
+      
+  }
+  
+  
+  .LoadingTodo-buttons-wrapper__button{
+      
+      height: 35px;
+      width: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--blue-soft);
+      border-radius: 50%;
+      border: 2px solid black;
+      margin: 10px;
+      transform: rotate(180deg);
+      cursor: pointer;
+      transition-duration: 1s;
+      background: linear-gradient(90deg, var(--blue-color), var(--blue-soft));
+      background-size: 400% 400%;
+      animation: loadingAnimation 3s ease-in-out infinite;
+  }
+  
+  
+  .LoadingTodo-buttons-wrapper__button-content{
+      color: black;
+  }
+  

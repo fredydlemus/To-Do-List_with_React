@@ -1,5 +1,7 @@
 import React from "react";
 
+import {AiFillCheckCircle, AiFillCloseCircle} from 'react-icons/ai';
+
 function TodoItem(props){
 
     
@@ -10,15 +12,21 @@ function TodoItem(props){
             </div>
             <div className={`item-buttons-wrapper ${props.completed && 'item-buttons-wrapper--completed'}`}>
                 <p className={`item-buttons-wrapper__button-content ${props.completed && 'item-buttons-wrapper__button-content--completed'}`}>Delete</p>
-                <span 
+                <AiFillCloseCircle 
                     className={`item-buttons-wrapper__button item-buttons-wrapper__button--delete ${props.completed && 'item-buttons-wrapper__button--deleted'}`}
-                    onClick={props.onDelete}
-                    >X</span>
+                    size="30px" 
+                    color="gray"
+                    onClick={props.onDelete}/>
+                    
+                 
                 <p className={`item-buttons-wrapper__button-content ${props.completed && 'item-buttons-wrapper__button-content--completed'}`}>Complete</p>
-                <span 
-                    className={`item-buttons-wrapper__button item-buttons-wrapper__button--complete ${props.completed && 'item-buttons-wrapper__button--completed'}`}
+                <AiFillCheckCircle 
+                    className={`item-buttons-wrapper__button item-buttons-wrapper__button--complete ${props.completed && 'item-buttons-wrapper__button--completed'}`} 
+                    size="30px" 
+                    color={`${!props.completed? 'gray' : 'green'}`}
                     onClick={props.onComplete}
-                    >ᄼ</span>
+                    />
+                    
             </div>
             
         </li>
