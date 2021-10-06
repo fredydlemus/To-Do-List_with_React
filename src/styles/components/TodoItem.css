@@ -46,7 +46,8 @@
     align-items: center;
     justify-content: right;
     border-top: 3px solid gray;
-    padding-right: 20px;
+    
+    width: 100%;
     
 }
 
