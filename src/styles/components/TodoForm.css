@@ -42,7 +42,7 @@ form {
   .TodoForm-buttonContainer {
     margin-top: 14px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
   }
