@@ -10,10 +10,11 @@ import { TodoDay } from "./TodoDay";
 import { LoginButton } from "./LoginButton";
 import { TodoHeader } from "./TodoHeader";
 import { CommentsButton } from "./CommentsButton";
-
+import {TodosError} from "./TodosError";
 import {Modal} from './Modal/modal';
 import {TodoForm} from './TodoForm';
 import {TodosLoading} from './TodosLoading';
+import {EmptyTodos} from "./EmptyTodos";
 
 
 
@@ -52,11 +53,14 @@ function App() {
           totalTodos={totalTodos}
           completedTodos={completedTodos}
         /> 
-        <TodoList>
-          {error && <p>Asustate</p>}
-          {loading && [<TodosLoading key={0}/>, <TodosLoading key={1}/>, <TodosLoading key={2}/>] }
-          {(!loading && !searchedTodos.length) && <p className="FirstMessage">Crea tu primer ToDo</p>}
-          {searchedTodos.map(todo => (
+        <TodoList
+          error={error}
+          loading={loading}
+          searchedTodos={searchedTodos}
+          onError={()=> <TodosError/>}
+          onLoading={() => <TodosLoading/>}
+          onEmptyTodos={() => <EmptyTodos/>}
+          render={todo => (
             <TodoItem 
               key={todo.text} 
               text={todo.text}
@@ -64,8 +68,9 @@ function App() {
               onComplete={() => completeTodo(todo.text)}
               onDelete={() => deleteTodo(todo.text)}
               />
-          ))} 
-        </TodoList>
+          )}
+        />
+
       </TodoDay>
       <CommentsButton/>
       {!!openModal &&(
