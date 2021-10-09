@@ -19,6 +19,9 @@
     --blue-soft: rgb(30, 30, 65);
 }
 
+*{
+    box-sizing: border-box;
+}
 
 body{
     background-color: var(--blue-color);
