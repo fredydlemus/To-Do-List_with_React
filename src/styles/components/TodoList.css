@@ -2,3 +2,15 @@
     list-style: none;
     padding: 0;
 }
+
+.create-first{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.empty-search{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}

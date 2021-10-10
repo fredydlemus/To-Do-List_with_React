@@ -10,6 +10,7 @@ function TodoForm({addTodo,
 
     const onChange = (event) => {
         setNewTodoValue(event.target.value);
+        
     };
 
     const onCancel = () =>{
@@ -17,6 +18,7 @@ function TodoForm({addTodo,
     };
 
     const onSubmit = (event) =>{
+        
         event.preventDefault();
         addTodo(newTodoValue);
         setOpenModal(false);

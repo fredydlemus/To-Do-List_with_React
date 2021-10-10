@@ -3,3 +3,7 @@
     margin-left: 20px;
     color: gray;
 }
+
+.dayCard__counter--loading{
+    opacity: 25%;
+}

@@ -15,7 +15,8 @@ import {Modal} from './Modal/modal';
 import {TodoForm} from './TodoForm';
 import {TodosLoading} from './TodosLoading';
 import {EmptyTodos} from "./EmptyTodos";
-
+import {OnEmptySearchResults} from './EmptySearchResults';
+import {ChangeAlert} from './ChangeAlert/ChangeAlert';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
     searchValue, 
     setSearchValue,
     addTodo,
+    sincronizeTodos
     
   }= useTodos();
 
@@ -47,29 +49,39 @@ function App() {
       <TodoSearch
         searchValue={searchValue}
         setSearchValue={setSearchValue}
+        loading={loading}
       />
-      <TodoDay date="Tuesday 28-sep-2021">
+      <TodoDay 
+        date="Tuesday 28-sep-2021"
+        loading={loading}>
         <TodoCounter
           totalTodos={totalTodos}
           completedTodos={completedTodos}
+          
         /> 
-        <TodoList
+        {<TodoList
+          searchText={searchValue}
+          totalTodos={totalTodos}
           error={error}
-          loading={loading}
+         
           searchedTodos={searchedTodos}
           onError={()=> <TodosError/>}
           onLoading={() => <TodosLoading/>}
           onEmptyTodos={() => <EmptyTodos/>}
-          render={todo => (
-            <TodoItem 
-              key={todo.text} 
+          onEmptySearchResults={() => <OnEmptySearchResults searchText={searchValue}/>}
+          
+        >
+          {todo =>(
+            
+            <TodoItem
+              key={todo.text}
               text={todo.text}
               completed={todo.completed}
-              onComplete={() => completeTodo(todo.text)}
-              onDelete={() => deleteTodo(todo.text)}
-              />
+              onComplete={()=> completeTodo(todo.text)}
+              onDelete={()=> deleteTodo(todo.text)}
+            />
           )}
-        />
+        </TodoList>}
 
       </TodoDay>
       <CommentsButton/>
@@ -84,7 +96,9 @@ function App() {
       <CreateTodoButton
         setOpenModal={setOpenModal}
       />
-      
+      <ChangeAlert
+        sincronize={sincronizeTodos}
+      />
     </React.Fragment>
     );
 }

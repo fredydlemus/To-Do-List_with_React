@@ -2,7 +2,7 @@ import React from "react";
 
 
 
-function TodoSearch({setSearchValue, searchValue}){
+function TodoSearch({setSearchValue, searchValue, loading}){
 
     
 
@@ -18,6 +18,7 @@ function TodoSearch({setSearchValue, searchValue}){
             placeholder = 'Cebolla'
             value={searchValue}
             onChange={onSearchValueChange}
+            disabled={loading}
             />
     );
 }

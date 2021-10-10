@@ -12,6 +12,7 @@
 @import './components/Modal.css';
 @import './components/TodoForm.css';
 @import './components/TodosLoading.css';
+@import './components/ChangeAlert.css';
 
 
 :root {
