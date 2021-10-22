@@ -1,0 +1,6 @@
+.CreateNewTodo{
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 16px;
+}

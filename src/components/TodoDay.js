@@ -6,7 +6,7 @@ function TodoDay({children, loading, date}){
     return(
        
         <section className="dayCard">
-            <h3 className="dayCard__dayTitle">{date}</h3>
+            {/* <h3 className="dayCard__dayTitle">{date}</h3> */}
             
             {React.Children
                 .toArray(children)

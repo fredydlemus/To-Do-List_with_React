@@ -5,11 +5,11 @@ import { CreateTodoButton } from "./CreateTodoButton";
 import { TodoList } from "./TodoList";
 import { TodoItem } from "./TodoItem";
 import { TodoSearch } from "./TodoSearch";
-import { TodoGreeting } from "./TodoGreeting";
+
 import { TodoDay } from "./TodoDay";
-import { LoginButton } from "./LoginButton";
+
 import { TodoHeader } from "./TodoHeader";
-import { CommentsButton } from "./CommentsButton";
+
 import {TodosError} from "./TodosError";
 import {Modal} from './Modal/modal';
 import {TodoForm} from './TodoForm';
@@ -17,6 +17,7 @@ import {TodosLoading} from './TodosLoading';
 import {EmptyTodos} from "./EmptyTodos";
 import {OnEmptySearchResults} from './EmptySearchResults';
 import {ChangeAlert} from './ChangeAlert/ChangeAlert';
+import CreateNewTodo from "./CreateNewTodo";
 
 
 function App() {
@@ -34,7 +35,8 @@ function App() {
     searchValue, 
     setSearchValue,
     addTodo,
-    sincronizeTodos
+    sincronizeTodos,
+    openSearch
     
   }= useTodos();
 
@@ -42,15 +44,17 @@ function App() {
   return(
     <React.Fragment>
       <TodoHeader>
-        <TodoGreeting user="Fredy" greeting="Good Afternoon "/>
-        <LoginButton/>
+        {/* <TodoGreeting user="Fredy" greeting="Good Afternoon "/>
+        <LoginButton/> */}
       </TodoHeader>
-      
-      <TodoSearch
+      {!!openSearch &&(
+        <TodoSearch
         searchValue={searchValue}
         setSearchValue={setSearchValue}
         loading={loading}
       />
+      )}
+      
       <TodoDay 
         date="Tuesday 28-sep-2021"
         loading={loading}>
@@ -82,9 +86,14 @@ function App() {
             />
           )}
         </TodoList>}
+        <CreateNewTodo 
+          onEmptyTodos={() => <EmptyTodos/>}>
+            <CreateTodoButton />
+
+        </CreateNewTodo>
 
       </TodoDay>
-      <CommentsButton/>
+      {/* <CommentsButton/> */}
       {!!openModal &&(
         <Modal>
           <TodoForm 
@@ -93,9 +102,7 @@ function App() {
           />
         </Modal>
       )}
-      <CreateTodoButton
-        setOpenModal={setOpenModal}
-      />
+      
       <ChangeAlert
         sincronize={sincronizeTodos}
       />

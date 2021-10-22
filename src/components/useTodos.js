@@ -14,6 +14,7 @@ function useTodos(){
     
       const [searchValue, setSearchValue] = React.useState('');
       const [openModal, setOpenModal] = React.useState(false);
+      const [openSearch, setOpenSearch] = React.useState(false);
 
       const completedTodos = todos.filter(todo => !!todo.completed).length;
       const totalTodos = todos.length;
@@ -74,6 +75,7 @@ function useTodos(){
         completeTodo,
         deleteTodo,
         openModal,
+        openSearch,
         setOpenModal,
         addTodo,
         sincronizeTodos,

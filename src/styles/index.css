@@ -13,11 +13,13 @@
 @import './components/TodoForm.css';
 @import './components/TodosLoading.css';
 @import './components/ChangeAlert.css';
+@import './components/CreateNewTodo.css';
 
 
 :root {
-    --blue-color: rgb(13, 13, 66);
+    --blue-color: #343434;
     --blue-soft: rgb(30, 30, 65);
+    --skyblue: #61DAFA;
 }
 
 *{

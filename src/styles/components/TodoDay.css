@@ -1,10 +1,13 @@
 .dayCard{
     margin-top: 30px;
-    border: 1px solid gray;
+    border: 1px solid var(--skyblue);
     border-radius: 10px;
     position: relative;
     padding: 10px;
     margin-bottom: 50px;
+    display: grid;
+    justify-content: center;
+    
 }
 
 .dayCard__dayTitle{
@@ -12,4 +15,8 @@
     text-align: center;
     font-size: 24px;
     margin-bottom: 0;
+}
+
+.dayCard__counter{
+    grid-row: 1 / 2;
 }
