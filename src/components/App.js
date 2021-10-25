@@ -14,7 +14,7 @@ import {TodosError} from "./TodosError";
 import {Modal} from './Modal/modal';
 import {TodoForm} from './TodoForm';
 import {TodosLoading} from './TodosLoading';
-import {EmptyTodos} from "./EmptyTodos";
+
 import {OnEmptySearchResults} from './EmptySearchResults';
 import {ChangeAlert} from './ChangeAlert/ChangeAlert';
 import CreateNewTodo from "./CreateNewTodo";
@@ -71,7 +71,7 @@ function App() {
           searchedTodos={searchedTodos}
           onError={()=> <TodosError/>}
           onLoading={() => <TodosLoading/>}
-          onEmptyTodos={() => <EmptyTodos/>}
+          
           onEmptySearchResults={() => <OnEmptySearchResults searchText={searchValue}/>}
           
         >
@@ -86,9 +86,8 @@ function App() {
             />
           )}
         </TodoList>}
-        <CreateNewTodo 
-          onEmptyTodos={() => <EmptyTodos/>}>
-            <CreateTodoButton />
+        <CreateNewTodo totalTodos={totalTodos}>
+            <CreateTodoButton setOpenModal={setOpenModal}/>
 
         </CreateNewTodo>
 

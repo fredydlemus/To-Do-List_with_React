@@ -6,7 +6,7 @@ function TodoCounter({totalTodos, completedTodos, loading}){
 
     
     return (
-        <h2 className={`dayCard__counter ${!!loading && "dayCard__counter--loading" }`}>today you has completed {completedTodos} of {totalTodos} ToDo's!!!</h2>
+        <h2 className={`dayCard__counter ${!!loading && "dayCard__counter--loading" }`}>today you have completed {completedTodos} of {totalTodos} ToDo's!!!</h2>
         
     );
 }
