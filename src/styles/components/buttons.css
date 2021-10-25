@@ -8,7 +8,8 @@
   z-index: 0;
   font-weight: bold;
   color: #fafafa;
-
+  display: grid;
+  place-content: center;
   height: 34px;
   width: 34px;
   transform: rotate(0);
